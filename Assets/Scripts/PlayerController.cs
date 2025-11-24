@@ -19,6 +19,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new  Vector2(X * Speed, Y * Speed);
+        rb.AddForce(new Vector2(X, Y) * Speed);
     }
 }
