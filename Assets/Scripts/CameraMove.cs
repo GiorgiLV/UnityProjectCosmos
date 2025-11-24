@@ -4,12 +4,11 @@ public class CameraMove : MonoBehaviour
 {
     public GameObject target;
     public float speed;
-    private Vector3 targetPos;
+    private Vector2 targetPos;
     
     void Update()
     {
         targetPos = target.transform.position;
-        targetPos.z = -10;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPos, speed * Time.deltaTime);
+        gameObject.transform.position = Vector3.Lerp(new Vector3(targetPos.x, targetPos.y, -50), targetPos, speed * Time.deltaTime);
     }
 }
