@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,5 +21,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(new Vector2(X, Y) * Speed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Meteor"))
+        {
+            gameObject.SetActive(false);
+            GameController.Lose = true;
+        }
     }
 }

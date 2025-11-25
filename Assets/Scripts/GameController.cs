@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private static bool Lose = false;
+    public static bool Lose = false;
     void Start()
     {
         

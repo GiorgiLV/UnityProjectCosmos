@@ -9,7 +9,6 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         targetPos = target.transform.position;
-        targetPos.z = -10;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPos, speed * Time.deltaTime);
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, new Vector3(targetPos.x, targetPos.y, gameObject.transform.position.z), speed * Time.deltaTime);
     }
 }
