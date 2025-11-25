@@ -8,3 +8,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+
+# Unity generated files
+*.csproj
+UserSettings/
