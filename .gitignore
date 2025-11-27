@@ -11,3 +11,4 @@
 
 # Unity generated files
 *.csproj
+/Assets/_Recovery
