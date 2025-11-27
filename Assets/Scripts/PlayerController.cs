@@ -7,15 +7,35 @@ public class PlayerController : MonoBehaviour
     public float Speed;
     public Joystick joystick;
     private Rigidbody2D rb;
+    private Vector2 teleport1Pos, teleport2Pos;
+    private float distance1, distance2;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        teleport1Pos = GameObject.Find("teleport1").transform.position;
+        teleport2Pos = GameObject.Find("teleport2").transform.position;
     }
     
     void Update()
     {
+        distance1 = Vector2.Distance(transform.position, teleport1Pos);
+        distance2 = Vector2.Distance(transform.position, teleport2Pos);
+        Debug.Log("1 - " + distance1);
+        Debug.Log("2 - " + distance2);
+        Vector2 needPos1 = new Vector2(teleport1Pos.x + 2,  teleport1Pos.y + 2);
+        Vector2 needPos2 = new Vector2(teleport2Pos.x + 2,  teleport2Pos.y + 2);
+        if (distance1 <= 1)
+        {
+            transform.position = needPos2;
+        }
+
+        if (distance2 <= 1)
+        {
+            transform.position = needPos1;
+        }
         X = joystick.Horizontal;
         Y = joystick.Vertical;
+        
     }
 
     void FixedUpdate()

@@ -1703,3 +1703,65 @@ Memory consumption went from 152.0 MB to 147.6 MB.
 Total: 13.342700 ms (FindLiveObjects: 1.182600 ms CreateObjectMapping: 1.489900 ms MarkObjects: 7.005200 ms  DeleteObjects: 3.662700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 949.506750 seconds.
+  path: Assets/Prefabs/Objects/Trash2 Variant.prefab
+  artifactKey: Guid(a98172603bf487145a7c425cf76f3ae9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Objects/Trash2 Variant.prefab using Guid(a98172603bf487145a7c425cf76f3ae9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '288e0a892c56c36948d607e3b7a3c26c') in 0.4951822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 50
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scripts/Spawn.cs
+  artifactKey: Guid(8489bc7b1fe8a7c4188c2911170c5c2c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scripts/Spawn.cs using Guid(8489bc7b1fe8a7c4188c2911170c5c2c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b1816f5fc41921d9bd7bf377027fea3b') in 0.0324427 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(0b07e9a5e71406c478b02d7167f69951) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scripts/PlayerController.cs using Guid(0b07e9a5e71406c478b02d7167f69951) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8472fbb397e6bb6b29234374a1d6a380') in 0.0320618 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Spaceship.unity
+  artifactKey: Guid(f2653632ddd01e34087c16b850f5fcf3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Spaceship.unity using Guid(f2653632ddd01e34087c16b850f5fcf3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '827f8f4ace04d7c0fef58b39d6e8d9d3') in 0.0402795 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefabs/Objects/Station.prefab
+  artifactKey: Guid(3b02592bfc3a83341b9ebbc3adb516c3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Objects/Station.prefab using Guid(3b02592bfc3a83341b9ebbc3adb516c3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6c5056b112ef1964ce865b3aa27c2e9d') in 0.0687234 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.758411 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Circle.png
+  artifactKey: Guid(a86470a33a6bf42c4b3595704624658b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Circle.png using Guid(a86470a33a6bf42c4b3595704624658b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+ -> (artifact id: 'ef08d48512cc3e5ea574da3352b83911') in 0.1124549 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Square.png
+  artifactKey: Guid(311925a002f4447b3a28927169b83ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Square.png using Guid(311925a002f4447b3a28927169b83ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e43e9e088af4104cd95208a9ec6cdd2') in 0.0310622 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

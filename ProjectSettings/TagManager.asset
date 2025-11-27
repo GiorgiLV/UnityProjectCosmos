@@ -8,6 +8,8 @@ TagManager:
   - NLO
   - Station
   - Wall
+  - Teleport1
+  - Teleport2
   layers:
   - Default
   - TransparentFX
