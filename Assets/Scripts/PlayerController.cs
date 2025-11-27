@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Station"))
         {
+            joystick.gameObject.SetActive(false);
             GameController.Win = true;
         }
     }

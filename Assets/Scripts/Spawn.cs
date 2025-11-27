@@ -4,8 +4,9 @@ using Random = UnityEngine.Random;
 
 public class SpawnMeteor : MonoBehaviour
 {
-    [SerializeField] private GameObject meteor, nlo, meteors, nlos, player, station;
-    [SerializeField] private int numOfMeteors, numOfNlo;
+    [SerializeField] private GameObject meteor, nlo, meteors, nlos, player, station, trash;
+    [SerializeField] private GameObject[] trashs =  new GameObject[3];
+    [SerializeField] private int numOfMeteors, numOfNlo, numOfTrash;
     [SerializeField] private Camera mainCam;
     void Start()
     {
@@ -14,7 +15,7 @@ public class SpawnMeteor : MonoBehaviour
             GameObject meteorClone = Instantiate(meteor, new Vector2(Random.Range(-5000, 5000), Random.Range(-5000, 5000)), Quaternion.identity);
             meteorClone.transform.SetParent(meteors.transform);
             meteorClone.name = $"MeteorClone{i+1}";
-            meteorClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-50, 50), Random.Range(-30, 30)), ForceMode2D.Impulse);
+            meteorClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-30, 30), Random.Range(-30, 30)), ForceMode2D.Impulse);
         }
 
         for (int i = 0; i < numOfNlo; i++)
@@ -23,10 +24,20 @@ public class SpawnMeteor : MonoBehaviour
             nloClone.transform.SetParent(nlos.transform);
             nloClone.name = $"NLOClone{i+1}";
         }
+
+        for (int i = 0; i < numOfTrash; i++)
+        {
+            GameObject trashClone = Instantiate(trashs[Random.Range(0, 3)],new Vector2(Random.Range(-5000, 5000), Random.Range(-5000, 5000)), Quaternion.identity);
+            trashClone.transform.SetParent(trash.transform);
+            trashClone.name = $"TrashClone{i+1}";
+            trashClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-30, 30), Random.Range(-30, 30)), ForceMode2D.Impulse);
+        }
         Vector3 playerSpawn = new Vector2(Random.Range(-3000, 3000), Random.Range(-3000, 3000));
         mainCam.transform.position = new Vector3(playerSpawn.x, playerSpawn.y, mainCam.transform.position.z);
         player.transform.position = playerSpawn;
+        GameController.Player = player;
         Vector3 stationSpawn = new Vector2(-playerSpawn.x,  -playerSpawn.y);
         GameObject stationClone = Instantiate(station, stationSpawn, Quaternion.identity);
+        GameController.Station =  stationClone;
     }
 }

@@ -15,7 +15,7 @@ public class NloMove : MonoBehaviour
     }
     void Update()
     {
-        if (Vector3.Distance(player.position, transform.position) < 50)
+        if (Vector3.Distance(player.position, transform.position) < 100)
         {
             isMoving = false;
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);

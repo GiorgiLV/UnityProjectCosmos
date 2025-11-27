@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,9 +6,10 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public static bool Lose, Win;
-    [SerializeField] private TextMeshProUGUI loseText;
+    [SerializeField] private TextMeshProUGUI loseText, distant;
     [SerializeField] private Button restartButton;
-    private int timer;
+    private int timer, distance;
+    [NonSerialized] public static GameObject Player, Station;
     void Start()
     {
         Lose = false;
@@ -19,6 +21,8 @@ public class GameController : MonoBehaviour
     
     void Update()
     {
+        distance = Convert.ToInt32(Vector2.Distance(Player.transform.position, Station.transform.position));
+        distant.text = $"До станции: {distance}м";
         if (Lose)
         {
             loseText.gameObject.SetActive(true);
