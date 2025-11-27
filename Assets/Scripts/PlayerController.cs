@@ -32,5 +32,10 @@ public class PlayerController : MonoBehaviour
             joystick.gameObject.SetActive(false);
             GameController.Lose = true;
         }
+
+        if (collision.gameObject.CompareTag("Station"))
+        {
+            GameController.Win = true;
+        }
     }
 }

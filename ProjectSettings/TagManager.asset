@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Meteor
   - NLO
+  - Station
+  - Wall
   layers:
   - Default
   - TransparentFX

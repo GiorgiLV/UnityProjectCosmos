@@ -4,13 +4,14 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public static bool Lose;
+    public static bool Lose, Win;
     [SerializeField] private TextMeshProUGUI loseText;
     [SerializeField] private Button restartButton;
     private int timer;
     void Start()
     {
         Lose = false;
+        Win = false;
         loseText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
         timer = 0;
@@ -23,6 +24,12 @@ public class GameController : MonoBehaviour
             loseText.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);
             loseText.text = $"You Lose! Time: {timer/100} s";
+        }
+        else if (Win)
+        {
+            loseText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            loseText.text = $"You Win! Time: {timer/100} s";
         }
         else
         {
