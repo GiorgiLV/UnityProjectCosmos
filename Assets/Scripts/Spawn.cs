@@ -4,18 +4,15 @@ using Random = UnityEngine.Random;
 
 public class SpawnMeteor : MonoBehaviour
 {
-    [SerializeField] private GameObject meteor, nlo, meteors, nlos, player, station, trash, teleport;
+    [SerializeField] private GameObject meteor, nlo, meteors, nlos, player, station, trash;
     [SerializeField] private GameObject[] trashs, teleports;
     [SerializeField] private int numOfMeteors, numOfNlo, numOfTrash;
     [SerializeField] private Camera mainCam;
-    private GameObject teleportNum;
     void Start()
     {
         for (int i = 0; i < teleports.Length; i++)
         {
-            teleportNum = Instantiate(teleports[i], new Vector2(Random.Range(-2500, 2500),Random.Range(-2500, 2500)), Quaternion.identity);
-            teleportNum.transform.SetParent(teleport.transform);
-            teleportNum.name = $"teleport{i+1}";
+            teleports[i].transform.position = new Vector2(Random.Range(-3000, 3000), Random.Range(-3000, 3000));
         }
         for (int i = 0; i < numOfMeteors; i++)
         {
